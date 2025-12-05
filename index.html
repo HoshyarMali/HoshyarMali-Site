@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>هشیار مالی – مدیریت هوشمند سرمایه</title>
+  
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Vazirmatn', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              900: '#0c4a6e',
+            },
+            dark: {
+              bg: '#0B1120',
+              card: '#1E293B',
+            }
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            }
+          }
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: "Vazirmatn", sans-serif; }
+    
+    .bg-grid-pattern {
+      background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .dark .bg-grid-pattern {
+      background-image: radial-gradient(#334155 1px, transparent 1px);
+    }
+    
+    /* افکت دکمه‌های دانلود */
+    .store-btn {
+      transition: all 0.3s ease;
+    }
+    .store-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-slate-800 dark:bg-dark-bg dark:text-gray-100 transition-colors duration-300 overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+  <div class="fixed inset-0 z-[-1] pointer-events-none">
+    <div class="absolute inset-0 bg-grid-pattern opacity-[0.4] dark:opacity-[0.15]"></div>
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[100px] -translate-x-1/3 -translate-y-1/3"></div>
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3"></div>
+  </div>
+
+  <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/70 dark:bg-dark-bg/70 border-b border-gray-200/50 dark:border-gray-800/50 supports-[backdrop-filter]:bg-white/60">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-cyan-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/20">
+          ه
+        </div>
+        <h1 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+          هشیار <span class="text-brand-600 dark:text-brand-400">مالی</span>
+        </h1>
+      </div>
+
+      <button onclick="document.documentElement.classList.toggle('dark')" 
+              class="p-2.5 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all ring-1 ring-gray-200 dark:ring-gray-700">
+        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      
+      <div class="flex-1 text-center lg:text-right z-10">
+        <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-blue-50 dark:bg-blue-900/20 text-brand-700 dark:text-brand-300 text-sm font-bold border border-blue-100 dark:border-blue-800 animate-fade-in-up">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+          </span>
+          نسخه جدید منتشر شد
+        </div>
+        
+        <h2 class="text-4xl lg:text-6xl font-extrabold leading-[1.2] mb-6 text-slate-900 dark:text-white">
+          مدیریت مالی 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-cyan-500 to-brand-600 animate-gradient-x">سریع و هوشمند</span>
+        </h2>
+        
+        <p class="text-slate-600 dark:text-slate-400 text-lg lg:text-xl mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          با هشیار مالی، محاسبات پیچیده وام، سود بانکی و تورم را در چند ثانیه انجام دهید و هوشمندانه‌تر تصمیم بگیرید.
+        </p>
+        
+        <div class="flex flex-col gap-4">
+          <p class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">دانلود رایگان برای اندروید و وب:</p>
+          
+          <div class="grid grid-cols-2 md:grid-cols-2 lg:flex gap-3 justify-center lg:justify-start flex-wrap">
+            
+<a href="#">
+
+  <img src="images/download_bazar.png" alt="کافه‌بازار" class="h-12"/>
+
+
+</a>
+
+
+<a href="#">
+
+  <img src="images/download_mayket.png" alt="" class="h-12"/>
+
+
+</a>
+
+            <a href="#" class="store-btn group flex items-center justify-center gap-3 px-4 py-3 bg-slate-900 dark:bg-brand-700 text-white rounded-xl shadow-lg shadow-slate-900/20 dark:shadow-brand-500/20 hover:bg-slate-800 dark:hover:bg-brand-600 min-w-[160px]">
+               <svg class="w-6 h-6 text-gray-200" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.3,12.5L17.38,15.69L15.13,13.44L17.38,11.2L20.3,14.39C20.61,13.9 20.61,13.09 20.3,12.5M6.05,2.66L16.81,8.88L14.54,11.14L3.84,2.15L6.05,2.66Z" /></svg>
+              <div class="text-right">
+                <div class="text-[10px] text-gray-300">لینک مستقیم</div>
+                <div class="font-bold text-sm">Android APK</div>
+              </div>
+            </a>
+
+             <a href="#" class="store-btn group flex items-center justify-center gap-3 px-4 py-3 bg-gray-100 dark:bg-gray-800 text-slate-800 dark:text-white rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 min-w-[160px]">
+                <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                <div class="text-right">
+                  <div class="text-[10px] text-gray-500">نسخه تحت وب</div>
+                  <div class="font-bold text-sm">Web App</div>
+                </div>
+              </a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1 w-full max-w-md lg:max-w-full relative flex justify-center">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-brand-500/30 to-purple-500/30 rounded-full blur-3xl animate-pulse-slow"></div>
+        
+        <div class="relative mx-auto bg-gray-900 border-[8px] border-gray-900 rounded-[3rem] h-[600px] w-[300px] shadow-2xl animate-float overflow-hidden ring-1 ring-white/10">
+            <div class="absolute top-0 inset-x-0 h-6 bg-gray-900 z-20 flex justify-center">
+                <div class="w-32 h-6 bg-gray-900 rounded-b-3xl relative top-0 flex justify-center items-center gap-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-gray-800"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-800"></div>
+                </div>
+            </div>
+
+            <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[11px] top-[72px] rounded-l-lg z-0"></div>
+            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[11px] top-[124px] rounded-l-lg z-0"></div>
+            <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[11px] top-[142px] rounded-r-lg z-0"></div>
+            
+            <div class="w-full h-full bg-gray-50 dark:bg-slate-900 relative pt-8 px-4 overflow-y-auto no-scrollbar">
+                <div class="flex justify-between items-center mb-6 mt-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-brand-100 dark:bg-brand-900/50 flex items-center justify-center text-brand-600 text-xs font-bold">ه</div>
+                        <div class="w-20 h-3 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+                    </div>
+                </div>
+                
+                <div class="h-40 rounded-2xl bg-gradient-to-br from-brand-500 to-cyan-600 shadow-lg shadow-brand-500/30 mb-6 p-4 text-white flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+                    <div class="w-1/2 h-3 rounded-full bg-white/30"></div>
+                    <div class="space-y-2">
+                         <div class="w-3/4 h-6 rounded-lg bg-white/20"></div>
+                         <div class="w-1/2 h-4 rounded-lg bg-white/10"></div>
+                    </div>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="h-16 rounded-xl bg-white dark:bg-gray-800 w-full shadow-sm flex items-center px-3 gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30"></div>
+                        <div class="flex-1 space-y-2">
+                            <div class="w-20 h-3 bg-gray-100 dark:bg-gray-700 rounded"></div>
+                            <div class="w-12 h-2 bg-gray-100 dark:bg-gray-700 rounded"></div>
+                        </div>
+                    </div>
+                     <div class="h-16 rounded-xl bg-white dark:bg-gray-800 w-full shadow-sm flex items-center px-3 gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-red-100 dark:bg-red-900/30"></div>
+                        <div class="flex-1 space-y-2">
+                            <div class="w-24 h-3 bg-gray-100 dark:bg-gray-700 rounded"></div>
+                            <div class="w-16 h-2 bg-gray-100 dark:bg-gray-700 rounded"></div>
+                        </div>
+                    </div>
+                     <div class="h-16 rounded-xl bg-white dark:bg-gray-800 w-full shadow-sm flex items-center px-3 gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30"></div>
+                        <div class="flex-1 space-y-2">
+                            <div class="w-16 h-3 bg-gray-100 dark:bg-gray-700 rounded"></div>
+                            <div class="w-10 h-2 bg-gray-100 dark:bg-gray-700 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="features" class="py-24 bg-white dark:bg-dark-bg relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center mb-16">
+        <h3 class="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">چرا هشیار مالی؟</h3>
+        <p class="text-slate-500 dark:text-slate-400">ابزارهایی دقیق برای تصمیم‌گیری اقتصادی درست</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        
+        <div class="group p-8 rounded-3xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-gray-800 hover:border-brand-500/50 dark:hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-2">
+          <div class="w-14 h-14 mb-6 rounded-2xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">محاسبه اقساط وام</h4>
+          <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">
+            محاسبه دقیق سود بانکی واقعی و مبلغ هر قسط تنها با وارد کردن مبلغ و مدت بازپرداخت.
+          </p>
+        </div>
+
+        <div class="group p-8 rounded-3xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-gray-800 hover:border-amber-500/50 dark:hover:border-amber-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-2">
+          <div class="w-14 h-14 mb-6 rounded-2xl bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">مقایسه هوشمند وام‌ها</h4>
+          <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">
+            شرایط وام‌های مختلف را کنار هم بگذارید و به‌صرفه‌ترین گزینه را برای خودتان انتخاب کنید.
+          </p>
+        </div>
+
+        <div class="group p-8 rounded-3xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-gray-800 hover:border-green-500/50 dark:hover:border-green-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/10 hover:-translate-y-2">
+          <div class="w-14 h-14 mb-6 rounded-2xl bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">تحلیل قدرت خرید</h4>
+          <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">
+            با احتساب تورم، ارزش واقعی پول خود را در آینده ببینید و هوشمندانه خرج کنید.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<section class="py-24 overflow-hidden bg-gray-50 dark:bg-[#0f1522]">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-16 text-slate-900 dark:text-white">محیط کاربری ساده و زیبا</h3>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+       <div class="relative group transform hover:-translate-y-2 transition-transform duration-300">
+         <img src="images/preview1.png" alt="" class="w-full h-auto object-cover rounded-2xl"/>
+       </div>
+
+       <div class="relative group mt-12 transform hover:-translate-y-2 transition-transform duration-300">
+         <img src="images/preview2.png" alt="" class="w-full h-auto object-cover rounded-2xl"/>
+       </div>
+
+       <div class="relative group transform hover:-translate-y-2 transition-transform duration-300">
+         <img src="images/preview3.png" alt="" class="w-full h-auto object-cover rounded-2xl"/>
+       </div>
+
+       <div class="relative group mt-12 transform hover:-translate-y-2 transition-transform duration-300">
+         <img src="images/preview4.png" alt="" class="w-full h-auto object-cover rounded-2xl"/>
+       </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="py-12 bg-white dark:bg-dark-card border-t border-gray-100 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <div class="flex items-center gap-2">
+         <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">ه</div>
+         <span class="font-bold text-slate-700 dark:text-gray-300">هشیار مالی</span>
+      </div>
+
+      <p class="text-slate-500 dark:text-slate-500 text-sm flex gap-1">
+        ساخته‌شده با ❤️ توسط <a href="https://erfanbanaei.ir" target="_blank" class="text-brand-600 dark:text-brand-400 hover:underline font-semibold">عرفان بنائی</a> | © ۲۰۲۵
+      </p>
+
+      <div class="flex gap-4">
+        <a href="https://erfanbanaei.ir" class="px-4 py-2 text-sm rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-brand-500 hover:text-white transition-colors">
+            وب‌سایت شخصی من
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
